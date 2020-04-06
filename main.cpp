@@ -10,6 +10,14 @@ int main()
  
     cout << " Input any number: ";
     cin >> number;
+    //Incase if number comes with less than zero it will save the programe to crahs
+    while(number == 0){
+        cout << "You enter a invalid number \n";
+        cout << "Type again \n"
+        cin >> number;
+    }
+        
+    
     digits = (int)log10(number);
     first = number / pow(10, digits);
     last = number % 10;
